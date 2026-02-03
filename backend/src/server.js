@@ -16,7 +16,7 @@ app.use(express.json({ limit: "5mb" }));
 app.use(cors({ origin: ENV.CLIENT_URL, credentials: true }));
 app.use(cookieParser());
 
-app.use('/api/auth/', authRoute);
+app.use('/api/auth', authRoute);
 app.use("/api/messages", messageRoutes);
 
 app.get("/api/health", (req, res) => {
